@@ -2,7 +2,18 @@
 <resources>
 
     <string name="app_name">GuessArena</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="beginner">BEGINNER</string>
+    <string name="easy">EASY</string>
+    <string name="normal">NORMAL</string>
+    <string name="hard">HARD</string>
+    <string name="very_hard">VERY HARD</string>
+    <string name="crazy">CRAZY</string>
+    <string name="impossible">IMPOSSIBLE</string>
+    <string name="word_length">Word Length: %1$d - %2$d</string>
+    <string name="answer_time_in_minutes">Time: %1$d minute(s)</string>
+    <string name="hint_number">Hint number: %1$d</string>
+    <string name="guess_number">Guess number: %1$d</string>
+    <string name="correction_percentages">Correction Percentages: %1$d%</string>
+    <string name="retry_number">Retry Number: %1$d time(s)</string>
 
 </resources>
