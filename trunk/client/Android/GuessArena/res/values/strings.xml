@@ -13,7 +13,12 @@
     <string name="answer_time_in_minutes">Time: %1$d minute(s)</string>
     <string name="hint_number">Hint number: %1$d</string>
     <string name="guess_number">Guess number: %1$d</string>
-    <string name="correction_percentages">Correction Percentages: %1$d%</string>
+    <string name="correction_percentages">Correction Percentages: %1$d\%</string>
     <string name="retry_number">Retry Number: %1$d time(s)</string>
+    <string name="one_one">1-1</string>
+    <string name="exp_bet">Experien Bet</string>
+    <string name="buki_bet">Buki Bet</string>
+    <string name="one_one_description">In this 1-1 match, you get the experience points you gain in the game. Blah blah blah...</string>
+    <string name="next">Next</string>
 
 </resources>

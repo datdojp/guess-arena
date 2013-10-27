@@ -26,49 +26,55 @@ public class CreateMatchOptionsActivity extends BaseActivity {
                 (Button) findViewById(R.id.bt_impossible)
         };
         mLevelButtons[0].setSelected(true);
-        
+
         Random rand = new Random();
         for (int i = 0; i < mLevelButtons.length; i++) {
-             int wordLengthMin = rand.nextInt(10);
-             int wordLengthMax = wordLengthMin + rand.nextInt(4) + 1;
-             int answerTimeInMinutes = rand.nextInt(10);
-             int hintNumber = rand.nextInt(10);
-             int guessNumber = rand.nextInt(5) * 2;
-             int correctionPercentages = rand.nextInt(60) + 40;
-             int retryNumber = rand.nextInt(5);
-             final MatchOptionSet optionSet = new MatchOptionSet(
-                     wordLengthMin,
-                     wordLengthMax,
-                     answerTimeInMinutes,
-                     hintNumber,
-                     guessNumber,
-                     correctionPercentages,
-                     retryNumber);
-             mLevelButtons[i].setOnClickListener(new OnClickListener() {
+            int wordLengthMin = rand.nextInt(10);
+            int wordLengthMax = wordLengthMin + rand.nextInt(4) + 1;
+            int answerTimeInMinutes = rand.nextInt(10);
+            int hintNumber = rand.nextInt(10);
+            int guessNumber = rand.nextInt(5) * 2;
+            int correctionPercentages = rand.nextInt(60) + 40;
+            int retryNumber = rand.nextInt(5);
+            final MatchOptionSet optionSet = new MatchOptionSet(
+                    wordLengthMin,
+                    wordLengthMax,
+                    answerTimeInMinutes,
+                    hintNumber,
+                    guessNumber,
+                    correctionPercentages,
+                    retryNumber);
+            mLevelButtons[i].setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    for (Button button : mLevelButtons) {
+                        button.setSelected(button == v);
+                    }
+
                     showOptionSet(optionSet);
                 }
             });
         }
+        
+        mLevelButtons[0].performClick();
     }
-    
+
     private void showOptionSet(MatchOptionSet optionSet) {
         ((TextView)findViewById(R.id.txt_word_length))
         .setText(getString(R.string.word_length, optionSet.getWordLengthMin(), optionSet.getWordLengthMax()));
-        
+
         ((TextView)findViewById(R.id.txt_answer_time_in_minutes))
         .setText(getString(R.string.answer_time_in_minutes, optionSet.getAnswerTimeInMinutes()));
-        
+
         ((TextView)findViewById(R.id.txt_hint_number))
         .setText(getString(R.string.hint_number, optionSet.getHintNumber()));
-        
+
         ((TextView)findViewById(R.id.txt_guess_number))
         .setText(getString(R.string.guess_number, optionSet.getGuessNumber()));
-        
+
         ((TextView)findViewById(R.id.txt_correction_percentages))
         .setText(getString(R.string.correction_percentages, optionSet.getCorrectionPercentages()));
-        
+
         ((TextView)findViewById(R.id.txt_retry_number))
         .setText(getString(R.string.retry_number, optionSet.getRetryNumber()));
     }
