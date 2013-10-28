@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+    <ImageView
+        android:id="@+id/friend_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/emo_im_cool" />
+
+    <TextView
+        android:id="@+id/friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/friend_avatar"
+        android:gravity="center_vertical"
+        android:text="@string/friend_name_1" />
+
+    <ImageView
+        android:id="@+id/online_status"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/indicator_code_lock_point_area_green"
+        android:contentDescription="@string/online" />
+
+</RelativeLayout>

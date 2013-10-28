@@ -1,5 +1,48 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+        <EditText
+            android:id="@+id/searchBuki"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:hint="@string/search_buki_hint"
+            android:ems="10" >
 
-</FrameLayout>
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/moreButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/searchBuki"
+            android:background="@drawable/menu_more" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/buki_item"
+        layout="@layout/buki_item_view"/>
+    
+    <include
+        android:id="@+id/buki_item"
+        layout="@layout/buki_item_view"/>
+    
+    <include
+        android:id="@+id/buki_item"
+        layout="@layout/buki_item_view"/>
+    
+    <include
+        android:id="@+id/buki_item"
+        layout="@layout/buki_item_view"/>
+    
+    <include
+        android:id="@+id/buki_item"
+        layout="@layout/buki_item_view"/>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal" 
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <ImageView
+        android:id="@+id/buki_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_launcher" 
+        android:contentDescription="@string/desc"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/buki_image" >
+
+        <TextView
+            android:id="@+id/buki_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/buki_name" />
+
+        <TextView
+            android:id="@+id/buki_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/buki_desc"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/item_number_badge"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="@string/buki_number" 
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/indicator_code_lock_point_area_red_holo"/>
+
+</RelativeLayout>

@@ -24,5 +24,18 @@
     <string name="next">Next</string>
     <string name="buki_bet_description">In this buki-bet match, you and your opponent pick one of your buki to bet. The winner will take the buki from the loser.</string>
     <string name="buki_to_bet">Select Buki to bet</string>
+    
+    <string name="tutorial_text">Game Tutorial</string>
+    <string name="desc">Description</string>
+    <string name="search_buki_hint">Search Buki</string>
+    <string name="skip">Skip</string>
+    <string name="buki_name">Name</string>
+    <string name="buki_desc">Description of buki</string>
+    <string name="buki_number">3</string>
+    <string name="friend_name_1">shinji kagawa</string>
+    <string name="friend_name_2">honda yamamoto</string>
+    <string name="online">online</string>
+    <string name="offline">offline</string>
+    <string name="notification">NOTIFICATION</string>
 
 </resources>
