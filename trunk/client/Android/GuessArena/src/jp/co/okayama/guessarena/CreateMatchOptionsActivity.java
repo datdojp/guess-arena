@@ -3,6 +3,7 @@ package jp.co.okayama.guessarena;
 import java.util.Random;
 
 import jp.co.okayama.guessarena.model.MatchOptionSet;
+import jp.co.okayama.guessarena.util.Utils;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,13 +11,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class CreateMatchOptionsActivity extends BaseActivity {
-    private Button[] mLevelButtons;
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
         setContentView(R.layout.activity_create_match_options);
 
-        mLevelButtons = new Button[] {
+        // option set
+        final Button[] optionSetButtons = new Button[] {
                 (Button) findViewById(R.id.bt_beginner),
                 (Button) findViewById(R.id.bt_easy),
                 (Button) findViewById(R.id.bt_normal),
@@ -25,10 +26,10 @@ public class CreateMatchOptionsActivity extends BaseActivity {
                 (Button) findViewById(R.id.bt_crazy),
                 (Button) findViewById(R.id.bt_impossible)
         };
-        mLevelButtons[0].setSelected(true);
+        optionSetButtons[0].setSelected(true);
 
         Random rand = new Random();
-        for (int i = 0; i < mLevelButtons.length; i++) {
+        for (int i = 0; i < optionSetButtons.length; i++) {
             int wordLengthMin = rand.nextInt(10);
             int wordLengthMax = wordLengthMin + rand.nextInt(4) + 1;
             int answerTimeInMinutes = rand.nextInt(10);
@@ -44,10 +45,10 @@ public class CreateMatchOptionsActivity extends BaseActivity {
                     guessNumber,
                     correctionPercentages,
                     retryNumber);
-            mLevelButtons[i].setOnClickListener(new OnClickListener() {
+            optionSetButtons[i].setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    for (Button button : mLevelButtons) {
+                    for (Button button : optionSetButtons) {
                         button.setSelected(button == v);
                     }
 
@@ -55,8 +56,38 @@ public class CreateMatchOptionsActivity extends BaseActivity {
                 }
             });
         }
-        
-        mLevelButtons[0].performClick();
+
+        optionSetButtons[0].performClick();
+
+
+        // type (1-1, exp bet, buki bet)
+        final View[] typeTabs = new View[] {
+                findViewById(R.id.one_one_tab),
+                findViewById(R.id.exp_bet_tab),
+                findViewById(R.id.buki_bet_tab)
+        };
+        final View[] typeLayouts = new View[] {
+                findViewById(R.id.one_one_layout),
+                findViewById(R.id.exp_bet_layout),
+                findViewById(R.id.buki_bet_layout)
+        };
+        for (int i = 0; i < typeTabs.length; i++) {
+            final int finalI = i;
+            typeTabs[i].setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    for (int j = 0; j < typeTabs.length; j++) {
+                        boolean selected = finalI == j;
+                        typeTabs[j].setSelected(selected);
+                        typeLayouts[j].setVisibility(selected ? View.VISIBLE : View.GONE);
+                    }
+                }
+            });
+        }
+        typeTabs[0].performClick();
+
+        // do not focus
+        Utils.focusNothing(this);
     }
 
     private void showOptionSet(MatchOptionSet optionSet) {

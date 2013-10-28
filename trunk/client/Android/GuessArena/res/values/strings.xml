@@ -19,6 +19,10 @@
     <string name="exp_bet">Experien Bet</string>
     <string name="buki_bet">Buki Bet</string>
     <string name="one_one_description">In this 1-1 match, you get the experience points you gain in the game. Blah blah blah...</string>
+    <string name="exp_bet_description">In this experience-bet match, you and your opponent use your own experiences points to bet. The winner will get all the bet experience point, regardless of how many experience point he gains in the game.</string>
+    <string name="exp_point_to_bet">Experience point to bet</string>
     <string name="next">Next</string>
+    <string name="buki_bet_description">In this buki-bet match, you and your opponent pick one of your buki to bet. The winner will take the buki from the loser.</string>
+    <string name="buki_to_bet">Select Buki to bet</string>
 
 </resources>
