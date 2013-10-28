@@ -1,7 +1,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff" >
+    android:background="#F1F1F1" >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -153,6 +154,7 @@
                 android:weightSum="3" >
 
                 <TextView
+                    android:id="@+id/one_one_tab"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -163,6 +165,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/exp_bet_tab"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1dp"
@@ -174,6 +177,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/buki_bet_tab"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1dp"
@@ -185,25 +189,247 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
                 <TextView
+                    android:id="@+id/one_one_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/one_one_description" />
-                
-                
-            </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/exp_bet_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/exp_bet_description" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/exp_point_to_bet"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="1000"
+                        tools:ignore="HardcodedText,TextFields" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buki_bet_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/buki_bet_description" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/buki_to_bet"
+                        android:textStyle="bold" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="5dp" >
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_1"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_2"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_3"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_2"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_4"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_1"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_3"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_4"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_1"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_2"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_3"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_4"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_1"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_2"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_3"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/buki_bg"
+                                android:padding="1dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/buki_4"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </LinearLayout>
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="35dp"
                 android:layout_gravity="right"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/next" />
         </LinearLayout>
     </ScrollView>
