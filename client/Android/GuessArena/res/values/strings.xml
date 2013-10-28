@@ -37,5 +37,12 @@
     <string name="online">online</string>
     <string name="offline">offline</string>
     <string name="notification">NOTIFICATION</string>
+    <string name="invite">INVITE</string>
+    <string name="events">EVENTS</string>
+    <string name="games">GAMES</string>
+    <string name="notif_number1">3</string>
+    <string name="notif_number2">1</string>
+    <string name="notif_number3">4</string>
+    <string name="notif_text">Notification Event</string>
 
 </resources>
