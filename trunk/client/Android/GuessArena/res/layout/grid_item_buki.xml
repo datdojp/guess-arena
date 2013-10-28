@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="150dp"
-    android:layout_height="150dp" >
+    android:layout_height="150dp"
+    android:background="@drawable/buki_bg" >
 
     <ImageView
         android:id="@+id/imageView_buki"
@@ -9,9 +10,10 @@
         android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:contentDescription="buki picture"
+        android:padding="2dp"
         android:scaleType="fitXY"
-        android:src="@drawable/buki_1"
-        android:contentDescription="buki picture"/>
+        android:src="@drawable/buki_1" />
 
     <CheckBox
         android:id="@+id/checkBox1"
