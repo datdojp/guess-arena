@@ -1,44 +1,49 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-    <EditText
-        android:id="@+id/searchBuki"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableRight="@android:drawable/ic_menu_search"
-        android:ems="10"
-        android:hint="@string/search_buki_hint" >
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-        <requestFocus />
-    </EditText>
+        <EditText
+            android:id="@+id/searchBuki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:ems="10"
+            android:hint="Search friend" >
 
-    <include
-        android:id="@+id/friend_1"
-        layout="@layout/friend_online_view" />
+            <requestFocus />
+        </EditText>
 
-    <include
-        android:id="@+id/friend_2"
-        layout="@layout/friend_online_view" />
+        <include
+            android:id="@+id/friend_1"
+            layout="@layout/friend_online_view" />
 
-    <include
-        android:id="@+id/friend_3"
-        layout="@layout/friend_offline_view" />
+        <include
+            android:id="@+id/friend_2"
+            layout="@layout/friend_online_view" />
 
-    <include
-        android:id="@+id/friend_4"
-        layout="@layout/friend_online_view" />
+        <include
+            android:id="@+id/friend_3"
+            layout="@layout/friend_offline_view" />
 
-    <include
-        android:id="@+id/friend_5"
-        layout="@layout/friend_offline_view" />
+        <include
+            android:id="@+id/friend_4"
+            layout="@layout/friend_online_view" />
 
-    <Button
-        android:id="@+id/skipButton"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:text="@string/skip" />
+        <include
+            android:id="@+id/friend_5"
+            layout="@layout/friend_offline_view" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/skipButton"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="@string/skip" />
+    </LinearLayout>
+
+</ScrollView>
