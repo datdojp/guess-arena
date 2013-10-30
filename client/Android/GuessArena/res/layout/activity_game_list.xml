@@ -1,118 +1,124 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1" >
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="#efefef" >
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_launcher" />
-
-        <TextView
-            android:id="@+id/textView_title"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="My Game"
-            android:textSize="22dp" />
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="48dp"
             android:layout_height="48dp"
-            android:src="@android:drawable/ic_menu_search" />
+            android:background="#efefef" >
 
-        <ImageView
-            android:id="@+id/imageButton1"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/overflow_button" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/create_match"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Create Match"
+                android:textSize="22dp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_search" />
+
+            <ImageView
+                android:id="@+id/imageButton1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/overflow_button" />
+        </LinearLayout>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/list_item_game" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/list_item_game" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/list_item_game" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/list_item_game" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/list_item_game" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/list_item_game" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/list_item_game" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/list_item_game" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee" />
     </LinearLayout>
 
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        layout="@layout/list_item_game" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#eee" />
-
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        layout="@layout/list_item_game" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#eee" />
-
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        layout="@layout/list_item_game" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#eee" />
-
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        layout="@layout/list_item_game" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#eee" />
-
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        layout="@layout/list_item_game" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#eee" />
-
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        layout="@layout/list_item_game" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#eee" />
-
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        layout="@layout/list_item_game" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#eee" />
-
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        layout="@layout/list_item_game" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#eee" />
-
-</LinearLayout>
+</ScrollView>

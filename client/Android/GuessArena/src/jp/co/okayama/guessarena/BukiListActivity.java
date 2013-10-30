@@ -1,5 +1,12 @@
 package jp.co.okayama.guessarena;
 
-public class BukiListActivity extends BaseActivity {
+import android.os.Bundle;
 
+public class BukiListActivity extends BaseActivity {
+    @Override
+    protected void onCreate(Bundle arg0) {
+        super.onCreate(arg0);
+        setContentView(R.layout.activity_buki_list);
+        setTitle("Buki List");
+    }
 }

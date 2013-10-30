@@ -9,6 +9,7 @@ public class StoreActivity extends BaseActivity {
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
         setContentView(R.layout.activity_store);
+        setTitle("Store");
 
         final View[] tabs = new View[] {
                 findViewById(R.id.tab_top),
