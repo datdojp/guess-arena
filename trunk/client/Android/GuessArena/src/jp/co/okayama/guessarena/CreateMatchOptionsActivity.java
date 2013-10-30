@@ -4,6 +4,7 @@ import java.util.Random;
 
 import jp.co.okayama.guessarena.model.MatchOptionSet;
 import jp.co.okayama.guessarena.util.Utils;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,6 +16,7 @@ public class CreateMatchOptionsActivity extends BaseActivity {
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
         setContentView(R.layout.activity_create_match_options);
+        setTitle("Create Match - Options");
 
         // option set
         final Button[] optionSetButtons = new Button[] {
@@ -86,8 +88,13 @@ public class CreateMatchOptionsActivity extends BaseActivity {
         }
         typeTabs[0].performClick();
 
-        // do not focus
-        Utils.focusNothing(this);
+        // next
+        findViewById(R.id.next).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CreateMatchOptionsActivity.this, CreateMatchInviteFriendActivity.class));
+            }
+        });
     }
 
     private void showOptionSet(MatchOptionSet optionSet) {
